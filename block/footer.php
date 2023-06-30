@@ -97,7 +97,7 @@
 	</footer>
 
 	<!-- main js -->
-	<script src="/assets/js/main.js?v=7"></script>
+	<script src="/assets/js/main.js?v=<?=$ver?>"></script>
 	<? foreach ($js as $i): ?> <script src="/assets/js/<?=$i?>.js?v=<?=$ver?>"></script> <? endforeach ?>
 
 	<? if ($site['metrika'] != null): ?><noscript><div><img src='https://mc.yandex.ru/watch/<?=$site['metrika']?>' style='position:absolute; left:-9999px;'/></div></noscript><?php endif ?>

@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title><?=$site['title_ru']?></title>
-<meta name="description" content="<?=$site['disc_ru']?>">
-<meta name="keywords" content="<?=$site['keyw_ru']?>">
-<meta name="theme-color" content="<?=$site['color']?>">
+<title><?=$menu['title_'.$lang]?></title>
+<meta name="description" content="<?=$menu['disc_'.$lang].' '.$site['phone_view']?>">
+<meta name="keywords" content="<?=$menu['keyw_'.$lang]?>">
+<meta name="theme-color" content="">
 
 <!-- icon -->
 <link rel="icon" href="/assets/img/logo/logox60.png" type="image/x-icon">
@@ -17,8 +17,8 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://<?=$site['site']?>" />
 <meta property="og:site_name" content="www.<?=$site['site']?>" />
-<meta property="og:title" content="<?=$site['title_ru']?>" />
-<meta property="og:description" content="<?=$site['disc_ru']?>" />
+<meta property="og:title" content="<?=$menu['title_'.$lang]?>" />
+<meta property="og:description" content="<?=$menu['disc_'.$lang].' '.$site['phone_view']?>" />
 <meta property="og:image" content="/assets/img/logo/logo.jpg" />
 
 <!-- apple -->
@@ -28,8 +28,8 @@
 <!-- ms -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta http-equiv="cleartype" content="on">
-<meta name="msapplication-tooltip" content="<?=$site['title_ru']?>">
-<meta name="msapplication-TileColor" content="<?=$site['color']?>">
+<meta name="msapplication-tooltip" content="<?=$site['title_'.$lang]?>">
+<meta name="msapplication-TileColor" content="">
 <meta name="msapplication-starturl" content="https://<?=$site['site']?>">
 
 <!-- css -->
@@ -41,8 +41,8 @@
 <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
 
 <!-- main css -->
-<link rel="stylesheet" type="text/css" href="/assets/css/norm.css?v=7" />
-<link rel="stylesheet" type="text/css" href="/assets/css/main.css?v=7" />
+<link rel="stylesheet" type="text/css" href="/assets/css/norm.css?v=<?=$ver?>" />
+<link rel="stylesheet" type="text/css" href="/assets/css/main.css?v=<?=$ver?>" />
 <? foreach ($css as $i): ?> <link rel="stylesheet" type="text/css" href="/assets/css/<?=$i?>.css?v=<?=$ver?>" /> <? endforeach ?>
 
 <!-- js -->
@@ -54,10 +54,7 @@
 <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> --> 
 
 
-
-
 <? if ($site['metrika'] != null): ?>
-	<!-- Yandex.Metrika counter -->
 	<script type='text/javascript'>
 		(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
 		m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
@@ -67,17 +64,16 @@
 <? endif ?>
 
 <? if ($site['pixel'] != null): ?>
-	<!-- Facebook Pixel Code -->
 	<script>
-	!function(f,b,e,v,n,t,s)
-	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-	n.queue=[];t=b.createElement(e);t.async=!0;
-	t.src=v;s=b.getElementsByTagName(e)[0];
-	s.parentNode.insertBefore(t,s)}(window, document,'script',
-	'https://connect.facebook.net/en_US/fbevents.js');
-	fbq('init', '<?=$site['pixel']?>');
-	fbq('track', 'PageView');
+		!function(f,b,e,v,n,t,s)
+		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+		n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t,s)}(window, document,'script',
+		'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '<?=$site['pixel']?>');
+		fbq('track', 'PageView');
 	</script>
 <? endif ?>

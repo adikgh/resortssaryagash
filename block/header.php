@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="kz">
+<html lang="<?=$lang?>">
 <head>
 
-	<?php include "head.php"; ?>
+	<? include "head.php"; ?>
 	
 </head>
 <body>
 
-	<?php include "preloader.php"; ?>
+	<? // include "preloader.php"; ?>
 
-	<?php include "menu.php"; ?>
+	<? include "menu.php"; ?>
 
 	<div class="body">

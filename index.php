@@ -3,7 +3,7 @@
 
 
 
-
+	$menu_name = 'home';
 	$header = false;
 ?>
 <? include 'block/header.php'; ?>
