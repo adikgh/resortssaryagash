@@ -10,8 +10,8 @@
 <meta name="theme-color" content="">
 
 <!-- icon -->
-<link rel="icon" href="/assets/img/logo/logox60.png" type="image/x-icon">
-<link rel="shortcut icon" type="image/icon" href="/assets/img/logo/logox60.png">
+<link rel="icon" href="/assets/img/logo/logo.png" type="image/x-icon">
+<link rel="shortcut icon" type="image/icon" href="/assets/img/logo/logo.png">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="www.<?=$site['site']?>" />
 <meta property="og:title" content="<?=$menu['title_'.$lang]?>" />
 <meta property="og:description" content="<?=$menu['disc_'.$lang].' '.$site['phone_view']?>" />
-<meta property="og:image" content="/assets/img/logo/logo.jpg" />
+<meta property="og:image" content="/assets/img/logo/logo.png" />
 
 <!-- apple -->
 <meta name="application-name" lang="<?=$site['lang']?>" content="<?=$site['site']?>">
@@ -33,8 +33,9 @@
 <meta name="msapplication-starturl" content="https://<?=$site['site']?>">
 
 <!-- css -->
-<link rel="preconnect" href="https://fonts.gstatic.com" />
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/assets/pl/fontawesome/css/all.min.css" />
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.css" /> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.6/swiper-bundle.min.css" />

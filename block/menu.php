@@ -2,51 +2,13 @@
 	<div class="header_con">
 		<div class="logo">
 			<a href="/">
-				<div class="logo_con lazy_bag" data-src="/assets/img/logo/logox120.png"></div>
-				<div class="logo_txt">Лучшие санатории<br>Сарыагаш</div>
+				<div class="logo_con lazy_bag" data-src="/assets/img/logo/logo.png"></div>
+				<div class="logo_txt"><?=$site['name']?></div>
 			</a>
 		</div>
 		<nav class="menu_dk">
 			<ul class="menu_i">
-				<li>
-					<a href="sana.php">Cанатории</a>
-					<i class="far fa-angle-down"></i>
-					<div class="menu_pin">
-						<ul class="menu_pi">
-							<? $sql = db::query("select * from sanatorium where number is not null and number > 0 and number < 11"); ?>
-						   <? while($menu = mysqli_fetch_array($sql)): ?>
-								<li>
-									<a href="/sanatorium/?id=<?=$menu['id']?>">
-										<i class="fal fa-hotel"></i>
-										<span><?=$menu['name_'.$lang]?></span>
-									</a>
-								</li>
-							<? endwhile ?>
-						</ul>
-						<ul class="menu_pi">
-							<? $sql = db::query("select * from sanatorium where number is not null and number > 10 and number < 21"); ?>
-						   <? while($menu = mysqli_fetch_array($sql)): ?>
-								<li>
-									<a href="/sanatorium/?id=<?=$menu['id']?>">
-										<i class="fal fa-hotel"></i>
-										<span><?=$menu['name_'.$lang]?></span>
-									</a>
-								</li>
-							<? endwhile ?>
-						</ul>
-						<ul class="menu_pi">
-							<? $sql = db::query("select * from sanatorium where number is not null and number > 20"); ?>
-							<? while($menu = mysqli_fetch_array($sql)): ?>
-								<li>
-									<a href="/sanatorium/?id=<?=$menu['id']?>">
-										<i class="fal fa-hotel"></i>
-										<span><?=$menu['name_'.$lang]?></span>
-									</a>
-								</li>
-							<? endwhile ?>
-						</ul>
-					</div>
-				</li>
+				<li><a href="sana.php">Cанатории</a></li>
 				<li><a href="#services">Услуги</a></li>
 				<li><a href="#reviews">Отзывы</a></li>
 				<li><a href="#contacts">Контакты</a></li>
@@ -54,8 +16,7 @@
 		</nav>
 		<div class="header_pj">
 			<div class="header_clc">
-				<a href="tel:<?=$site['phone']?>"><?=$site['phone_view']?></a>
-				<p class="disb_zab">Перезвоните мне</p>
+				<div class="btn disb_zab">cвязатся</div>
 			</div>
 			<div class="menu_pj"><i class="far fa-bars"></i></div>
 		</div>
