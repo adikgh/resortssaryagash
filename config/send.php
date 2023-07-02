@@ -11,7 +11,7 @@
 
 	   // telegram
 		$arr = array(
-			// 'Сайт атауы:'	=> 'osanatori.kz',
+			// 'Сайт атауы:'	=> 'resorts-.kz',
 			'Аты-жөні: '	=> $name,
 			'Телефон: ' 	=> $phone
 		);
@@ -21,14 +21,11 @@
 		};
 
 		$token = "1082028620:AAGRXcmhEtOlK3Z29Fa7Vq6JfIK1Uwdw-P4";
-		$chat_id = "-957523727";
+		$chat_id = "-1001942352953";
 		$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
 
-		if ($sendToTelegram) {
-	    	echo "yes";
-		} else {
-	    	echo "error";
-		}
+		if ($sendToTelegram) echo "yes";
+		else echo "error";
 
 		exit();
 	}

@@ -83,14 +83,15 @@ $(document).ready(function() {
 		var name = $(this).parent().siblings().children('.name')
 		var phone = $(this).parent().siblings().children('.phone')
 
-		if (name.attr('data-pr') != 1 || phone.attr('data-pr') != 1) {
-			mess('Введите свой данный')
-		} else {
+		if (name.attr('data-pr') != 1 || phone.attr('data-pr') != 1) mess('Введите свой данный')
+		else {
 			$.ajax({
 				url: "/config/send.php?mess",
 				type: "POST",
 				dataType: "html",
 				data: ({name: name.val(), phone: phone.val()}),
+				beforeSend: function(){ mess('Отправка..') },
+				error: function(data){ console.log(data) },
 				success: function(data){
 					if (data == 'yes') { 
 						mess('Успешно отправлено')
@@ -98,10 +99,11 @@ $(document).ready(function() {
 						phone.attr('data-pr', 0)
 						name.val('')
 						name.attr('data-pr', 0)
-					} else mess('Пожалуйста, перезагрузите сайт <br>и попробуйте еще раз')
+					} else {
+						mess('Пожалуйста, перезагрузите сайт <br>и попробуйте еще раз')
+						console.log(data);
+					}
 				},
-				beforeSend: function(){ mess('Отправка..') },
-				error: function(data){ mess('Ошибка..') }
 			})
 		}
 	})
