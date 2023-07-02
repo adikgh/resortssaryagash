@@ -1,4 +1,4 @@
-<?php
+<?
 
 	// bot
 	/* https://api.telegram.org/bot1082028620:AAGRXcmhEtOlK3Z29Fa7Vq6JfIK1Uwdw-P4/getUpdates */
@@ -21,7 +21,7 @@
 		};
 
 		$token = "1082028620:AAGRXcmhEtOlK3Z29Fa7Vq6JfIK1Uwdw-P4";
-		$chat_id = "-670266891";
+		$chat_id = "-957523727";
 		$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
 
 		if ($sendToTelegram) {
