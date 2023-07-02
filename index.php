@@ -21,10 +21,6 @@
 					<div class="top_site_abs lazy_bag" data-src="/assets/img/bag/19384.png"></div>
 				</div>
 			</div>
-			<div class="top_site_s">
-				<div class="top_site_si"><a target="_blank" href="https://www.instagram.com/<?=$site['instagram']?>"><i class="fab fa-instagram"></i></a></div>
-				<div class="top_site_si"><a target="_blank" href="https://www.facebook.com/<?=$site['facebook']?>"><i class="fab fa-facebook"></i></i></a></div>
-			</div>
 		</div>
 	</div>
 
